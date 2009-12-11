@@ -1,4 +1,5 @@
 package Devel::IntelliPerl;
+our $VERSION = '0.03';
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -11,7 +12,6 @@ my $KEYWORD = '[a-zA-Z_][_a-zA-Z0-9]*';
 my $CLASS   = '(' . $KEYWORD . ')(::' . $KEYWORD . ')*';
 my $VAR     = '\$' . $CLASS;
 
-our $VERSION = '0.02';
 
 has line_number => ( isa => 'Int', is => 'rw', required => 1 );
 has column      => ( isa => 'Int', is => 'rw', required => 1 );
@@ -257,6 +257,10 @@ __END__
 Devel::IntelliPerl - Auto-completion for Perl
 
 
+=head1 VERSION
+
+version 0.03
+
 =head1 SYNOPSIS
 
     use Devel::IntelliPerl;
@@ -272,14 +276,14 @@ Devel::IntelliPerl - Auto-completion for Perl
     sub bar {
         my ($self, $c) = @_;
         # $c isa Catalyst
-        $self->foo->
+        $self->
     }
 
     1;
     SOURCE
 
 
-    my $ip = Devel::IntelliPerl->new(source => $source, line_number => 9, column => 12);
+    my $ip = Devel::IntelliPerl->new(source => $source, line_number => 10, column => 12);
     
     my @methods = $ip->methods;
     
@@ -287,6 +291,10 @@ C<@methods> contains C<bar>, C<foo>, and C<foobar> amongst others.
 Method completion for C<$c> works as well. Using the comment C<# $c isa Catalyst> you can specify
 the variable C<$c> as an object of the C<Catalyst> class. This comment can be located anywhere in
 the current file.
+
+Even though the example uses Moose, this module works also with non Moose classes.
+
+See L</SCREENCASTS> for usage examples.
     
 =head1 ATTRIBUTES
 
@@ -316,7 +324,7 @@ Store the filename of the current file. If this value is set C<@INC> is extended
 found in any parent directory. This is useful if you want to have access to modules which are not in C<@INC> but in
 your local C<lib> folder. This method sets L</inc>.
 
-B<This value is NOT used to retrive the source code!> Use L</source> instead.
+B<This value is NOT used to retrive the source code!> Use L<source|/source (Str $source)> instead.
 
 =head2 inc (ArrayRef[Str] $inc)
 

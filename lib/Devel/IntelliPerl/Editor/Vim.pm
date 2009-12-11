@@ -1,4 +1,5 @@
 package Devel::IntelliPerl::Editor::Vim;
+our $VERSION = '0.03';
 
 use Moose;
 
@@ -30,7 +31,7 @@ sub run {
         print join( "\n", @methods );
     }
     elsif ( my $method = shift @methods ) {
-        print substr( $method, length $ip->prefix );
+        print $method;
     }
     elsif ( my $error = $ip->error ) {
         print "The following error occured:\n" . $error;
@@ -45,6 +46,10 @@ __END__
 =head1 NAME
 
 Devel::IntelliPerl::Editor::Vim - IntelliPerl integration for Vim 
+
+=head1 VERSION
+
+version 0.03
 
 =head1 SYNOPSIS
 

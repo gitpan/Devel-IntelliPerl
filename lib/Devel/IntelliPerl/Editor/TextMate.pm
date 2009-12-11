@@ -1,4 +1,5 @@
 package Devel::IntelliPerl::Editor::TextMate;
+our $VERSION = '0.03';
 
 use Moose;
 
@@ -38,6 +39,10 @@ __PACKAGE__->meta->make_immutable;
 =head1 NAME
 
 Devel::IntelliPerl::Editor::TextMate - IntelliPerl integration for TextMate
+
+=head1 VERSION
+
+version 0.03
 
 =head1 SYNOPSIS
 
