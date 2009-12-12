@@ -1,5 +1,5 @@
 package Devel::IntelliPerl::Editor;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Moose;
 
@@ -15,7 +15,7 @@ Devel::IntelliPerl::Editor - Base class for editor integration
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 METHODS
 

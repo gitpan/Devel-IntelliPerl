@@ -1,6 +1,6 @@
 package 
   Bar;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 use Moose;
 
 has bar => ( isa => 'Bar', is => 'rw' );

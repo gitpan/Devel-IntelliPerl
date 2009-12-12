@@ -1,5 +1,5 @@
 package Devel::IntelliPerl;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -259,7 +259,7 @@ Devel::IntelliPerl - Auto-completion for Perl
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

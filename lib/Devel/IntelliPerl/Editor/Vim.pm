@@ -1,11 +1,10 @@
 package Devel::IntelliPerl::Editor::Vim;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Moose;
 
 use Exporter qw(import);
 use Devel::IntelliPerl;
-use Text::Table;
 
 extends 'Devel::IntelliPerl::Editor';
 
@@ -49,7 +48,7 @@ Devel::IntelliPerl::Editor::Vim - IntelliPerl integration for Vim
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

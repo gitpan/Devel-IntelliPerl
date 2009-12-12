@@ -1,5 +1,5 @@
 package Devel::IntelliPerl::Editor::TextMate;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Moose;
 
@@ -42,7 +42,7 @@ Devel::IntelliPerl::Editor::TextMate - IntelliPerl integration for TextMate
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

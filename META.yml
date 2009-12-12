@@ -12,8 +12,8 @@ requires:
   Devel::Declare: 0.005011
   Moose: 0.81
   MooseX::Method::Signatures: 0.29
-  PPI': 1.203
+  PPI: 1.203
   Path::Class: 0
 resources:
   repository: http://github.com/monken/Devel-IntelliPerl
-version: 0.03
+version: 0.04
